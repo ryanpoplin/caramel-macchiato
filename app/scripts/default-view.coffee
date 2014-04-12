@@ -17,6 +17,8 @@ class DefaultView extends Backbone.View
 
 			$('#default-section button').fadeOut(100);
 
+			$('#footer-btn').css('transform', 'rotate(180deg) scaleX(-1)');
+
 			$('#default-footer').animate({
 					height: 325
 				})
@@ -38,6 +40,8 @@ class DefaultView extends Backbone.View
 		else if footerHeight == 324 
 
 			$('#default-section button').fadeIn(100);
+
+			$('#footer-btn').css('transform', 'rotate(360deg) scaleX(-1)');
 
 			$('.log-sign-span').css('display', 'none')
 
