@@ -16,16 +16,18 @@ class DefaultView extends Backbone.View
 		if footerHeight == 120
 
 			$('#default-footer').animate({
-					height: 220
+					height: 240
 				})
 
 			$('#footer-btn').animate({
-					bottom: 163
+					bottom: 183
 				})
+
+			$('#log-sign').fadeOut();
 
 			true 
 
-		else if footerHeight == 220 
+		else if footerHeight == 240 
 
 			$('#default-footer').animate({
 					height: 120
@@ -34,6 +36,8 @@ class DefaultView extends Backbone.View
 			$('#footer-btn').animate({
 					bottom: 63
 				})
+
+			$('#log-sign').fadeIn();
 
 			true
 
