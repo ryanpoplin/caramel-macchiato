@@ -13,4 +13,4 @@ class DefaultView extends Backbone.View
 
 	initialize: ->
 
-		console.log 'AppRouter init...'
+		console.log 'DefaultView init...'
