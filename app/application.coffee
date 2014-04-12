@@ -12,4 +12,3 @@ class Application extends Backbone.Marionette.Application
 
 
 module.exports = Application
-

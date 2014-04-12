@@ -7,6 +7,7 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -50,4 +51,93 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+// Start the shit...
+
+main#default-main {
+
+	position: relative;
+
+	header#default-header {
+
+		div#logo-container {
+
+			border-radius: 5px;
+			display: block;
+			margin: 0 auto;
+			padding: 2em;
+			max-width: 450px;
+			text-align: center;
+
+			h1#logo {
+
+				font-size: 9em;
+				color: #10b5b8;
+
+			}	
+
+		}
+
+		h2#heading {
+
+			font-size: 3em;
+			text-align: center;
+			margin: .4em 0 .4em 0;
+
+		}
+
+		h3#sub-heading {
+
+			font-size: 2em;
+			text-align: center;
+
+		}
+
+	}
+
+	section#default-section {
+
+		button {
+
+			cursor: pointer;
+			background-color: #10b5b8;
+			color: #fefefe;
+			border: 1px solid #e0e0e0;
+			display: block;
+			margin: 1.2em auto;
+			font-size: 2.5em;
+			padding: .5em;
+
+		}
+
+	}
+
+	div#footer-btn {
+
+		cursor: pointer;
+		border-radius: 100px;
+		padding: 1.5em;
+		background-color: #e0e0e0;
+		height: 110px;
+		width: 110px;
+		position: absolute;
+		margin: 0 auto;
+		display: block;
+		left: 50px;
+		right: 50px;
+		bottom: 63px;
+
+	}	
+
+	footer#default-footer {
+
+		background-color: #e0e0e0;
+		height: 120px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+
+	}
+
 }
