@@ -57,8 +57,6 @@ table {
 
 main#default-main {
 
-	position: relative;
-
 	header#default-header {
 
 		div#logo-container {
@@ -113,30 +111,31 @@ main#default-main {
 
 	}
 
-	div#footer-btn {
-
-		cursor: pointer;
-		border-radius: 100px;
-		padding: 1.5em;
-		background-color: #e0e0e0;
-		height: 110px;
-		width: 110px;
-		position: absolute;
-		margin: 0 auto;
-		display: block;
-		left: 50px;
-		right: 50px;
-		bottom: 63px;
-
-	}	
-
 	footer#default-footer {
 
+		overflow: visible !important;
 		background-color: #e0e0e0;
 		height: 120px;
 		position: fixed;
 		bottom: 0;
 		width: 100%;
+
+		div#footer-btn {
+
+			cursor: pointer;
+			border-radius: 100px;
+			padding: 1.5em;
+			background-color: #e0e0e0;
+			height: 110px;
+			width: 110px;
+			position: absolute;
+			margin: 0 auto;
+			display: block;
+			left: 50px;
+			right: 50px;
+			bottom: 63px;
+
+		}	
 
 	}
 
