@@ -15,6 +15,8 @@ class DefaultView extends Backbone.View
 
 		if footerHeight == 120
 
+			$('#default-section button').fadeOut(100);
+
 			$('#default-footer').animate({
 					height: 325
 				})
@@ -23,17 +25,21 @@ class DefaultView extends Backbone.View
 					bottom: 275
 				})
 
-			$('#default-section button').fadeOut(100);
-
 			$('#log-sign').fadeOut(100);
+
+			$('#log-sign-container button').css('display', 'block')
 
 			$('#log-sign-container button').fadeIn(100)
 
-			$('#log-sign-container button').css('display', 'block')
+			$('.log-sign-span').fadeIn(100)
 
 			true 
 
 		else if footerHeight == 324 
+
+			$('#default-section button').fadeIn(100);
+
+			$('.log-sign-span').css('display', 'none')
 
 			$('#default-footer').animate({
 					height: 120
@@ -43,13 +49,11 @@ class DefaultView extends Backbone.View
 					bottom: 63
 				})
 
-			$('#default-section button').fadeIn();
-
-			$('#log-sign').fadeIn();
-
 			$('#log-sign-container button').fadeOut()
 
 			$('#log-sign-container button').css('display', 'none')
+
+			$('#log-sign').fadeIn(100);
 
 			true
 
