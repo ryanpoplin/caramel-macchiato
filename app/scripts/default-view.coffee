@@ -7,27 +7,33 @@ class DefaultView extends Backbone.View
 	template: require 'templates/default-template'
 
 	events:
-		'click div#footer-btn': 'footerAnimate'
+		'click div#footer-btn': 'viewAnimation'
 
-	footerAnimate: ->
+	viewAnimation: ->
 
 		footerHeight = $('#default-footer').height()
 
 		if footerHeight == 120
 
 			$('#default-footer').animate({
-					height: 240
+					height: 325
 				})
 
 			$('#footer-btn').animate({
-					bottom: 183
+					bottom: 275
 				})
 
-			$('#log-sign').fadeOut();
+			$('#default-section button').fadeOut(100);
+
+			$('#log-sign').fadeOut(100);
+
+			$('#log-sign-container button').fadeIn(100)
+
+			$('#log-sign-container button').css('display', 'block')
 
 			true 
 
-		else if footerHeight == 240 
+		else if footerHeight == 324 
 
 			$('#default-footer').animate({
 					height: 120
@@ -37,7 +43,13 @@ class DefaultView extends Backbone.View
 					bottom: 63
 				})
 
+			$('#default-section button').fadeIn();
+
 			$('#log-sign').fadeIn();
+
+			$('#log-sign-container button').fadeOut()
+
+			$('#log-sign-container button').css('display', 'none')
 
 			true
 
