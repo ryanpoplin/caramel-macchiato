@@ -8,6 +8,8 @@ class DefaultView extends Backbone.View
 
 	events:
 		'click div#footer-btn': 'viewAnimation'
+		'click button.facebook': 'facebookModal'
+		'click button.email': 'emailModal'
 
 	viewAnimation: ->
 
@@ -61,7 +63,15 @@ class DefaultView extends Backbone.View
 
 			true
 
-		false 			
+		false 	
+
+	facebookModal: ->
+
+		alert 'Facebook...'
+
+	emailModal: ->
+
+		alert 'Email...'		
 
 	render: ->
 
