@@ -10,6 +10,7 @@ class DefaultView extends Backbone.View
 		'click div#footer-btn': 'viewAnimation'
 		'click button.facebook': 'facebookModal'
 		'click button.email': 'emailModal'
+		'click div.modal span.huge-x': 'closeModal'
 
 	viewAnimation: ->
 
@@ -41,9 +42,11 @@ class DefaultView extends Backbone.View
 
 		else if footerHeight == 324 
 
-			$('#default-section button').fadeIn(100);
+			$('div.modal').css('display', 'none')
 
-			$('#footer-btn').css('transform', 'rotate(360deg) scaleX(-1)');
+			$('#default-section button').fadeIn(100)
+
+			$('#footer-btn').css('transform', 'rotate(360deg) scaleX(-1)')
 
 			$('.log-sign-span').css('display', 'none')
 
@@ -67,11 +70,17 @@ class DefaultView extends Backbone.View
 
 	facebookModal: ->
 
-		alert 'Facebook...'
+		$('div#default-header div#defualt-section').css('display', 'none')
+
+		$('div.modal').fadeIn(500)
 
 	emailModal: ->
 
-		alert 'Email...'		
+		$('div.modal').fadeIn()
+
+	closeModal: ->
+
+		$('div.modal').fadeOut(100)	
 
 	render: ->
 
