@@ -8,9 +8,7 @@ class DefaultView extends Backbone.View
 
 	events:
 		'click div#footer-btn': 'viewAnimation'
-		'click button.facebook': 'facebookModal'
-		'click button.email': 'emailModal'
-		'click div.modal span.huge-x': 'closeModal'
+		'click a.close': 'openDrawer'
 
 	viewAnimation: ->
 
@@ -22,25 +20,30 @@ class DefaultView extends Backbone.View
 
 			$('#footer-btn').css('transform', 'rotate(180deg) scaleX(-1)');
 
-			$('#default-footer').animate({
+			$('#default-footer')
+				.stop()
+				.animate({
 					height: 325
 				})
+				.end()
 
 			$('#footer-btn').animate({
 					bottom: 275
 				})
 
-			$('#log-sign').fadeOut(100);
-
-			$('#log-sign-container button').css('display', 'block')
+			$('#log-sign-container button').css('display', 'inline-block')
 
 			$('#log-sign-container button').fadeIn(100)
 
 			$('.log-sign-span').fadeIn(100)
 
+			$('p.extra-span').css('display', 'block')
+
+			$('span.extra-color').css('display', 'inline')
+
 			true 
 
-		else if footerHeight == 324 
+		else if footerHeight >= 324 
 
 			$('div.modal').css('display', 'none')
 
@@ -50,9 +53,12 @@ class DefaultView extends Backbone.View
 
 			$('.log-sign-span').css('display', 'none')
 
-			$('#default-footer').animate({
+			$('#default-footer')
+				.stop()
+				.animate({
 					height: 120
 				})
+				.end()
 
 			$('#footer-btn').animate({
 					bottom: 63
@@ -62,25 +68,21 @@ class DefaultView extends Backbone.View
 
 			$('#log-sign-container button').css('display', 'none')
 
-			$('#log-sign').fadeIn(100);
+			$('span.log-sign-span').css('display', 'none')
+
+			$('p.extra-span').css('display', 'none')
+
+			$('span.extra-color').css('display', 'none')
 
 			true
 
-		false 	
+		false 
 
-	facebookModal: ->
-
-		$('div#default-header div#defualt-section').css('display', 'none')
-
-		$('div.modal').fadeIn(500)
-
-	emailModal: ->
-
-		$('div.modal').fadeIn()
-
-	closeModal: ->
-
-		$('div.modal').fadeOut(100)	
+	openDrawer: ->
+		
+		setTimeout ( ->
+			$('div#footer-btn').click()
+		), 10
 
 	render: ->
 

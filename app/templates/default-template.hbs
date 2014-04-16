@@ -1,13 +1,12 @@
-<div class="modal">
-	<span class="huge-x">X</span>
-	<p>Facebook...</p>
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<p>This is a sample modal box that can be created using the powers of CSS3.</p>
+		<p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+	</div>
 </div>
 
 <main id="default-main">
-
-	<!--<div class="modal">
-		<p></p>
-	</div>-->
 
 	<header id="default-header">
 
@@ -55,11 +54,11 @@
 		<h4 id="log-sign">Log In / Sign Up</h4>
 
 		<div id="log-sign-container">
-			<button class="facebook">Log In with Facebook</button>
+			<a href="#openModal"><button class="facebook">Log In with Facebook</button></a>
 			<span class="log-sign-span">OR</span>
-			<button class="email">Log In with Email</button>
-			<span class="log-sign-span">Already signed up? Log In
-			</span>
+			<a href="#openModal"><button class="email">Log In with Email</button></a>
+			<p class="extra-span">Already signed up? <span class="extra-color">Log In...<span>
+			</p>
 		</div>
 
 	</footer>
