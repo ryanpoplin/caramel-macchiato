@@ -21,15 +21,18 @@ class DefaultView extends Backbone.View
 			$('#footer-btn').css('transform', 'rotate(180deg) scaleX(-1)');
 
 			$('#default-footer')
-				.stop()
+				.stop(10)
 				.animate({
 					height: 325
 				})
-				.end()
+				.end(10)
 
-			$('#footer-btn').animate({
+			$('#footer-btn')
+				.stop(10)
+				.animate({
 					bottom: 275
 				})
+				.end(10)
 
 			$('#log-sign-container button').css('display', 'inline-block')
 
@@ -54,15 +57,18 @@ class DefaultView extends Backbone.View
 			$('.log-sign-span').css('display', 'none')
 
 			$('#default-footer')
-				.stop()
+				.stop(10)
 				.animate({
 					height: 120
 				})
-				.end()
+				.end(10)
 
-			$('#footer-btn').animate({
+			$('#footer-btn')
+				.stop(10)
+				.animate({
 					bottom: 63
 				})
+				.end(10)
 
 			$('#log-sign-container button').fadeOut()
 
