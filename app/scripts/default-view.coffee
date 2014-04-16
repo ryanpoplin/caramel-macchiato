@@ -16,16 +16,16 @@ class DefaultView extends Backbone.View
 
 		if footerHeight == 120
 
-			$('#default-section button').fadeOut(100);
+			$('#default-section button').fadeOut(50);
 
 			$('#footer-btn').css('transform', 'rotate(180deg) scaleX(-1)');
 
 			$('#default-footer')
-				.stop(10)
+				.stop()
 				.animate({
 					height: 325
 				})
-				.end(10)
+				.end()
 
 			$('#footer-btn')
 				.stop(10)
@@ -42,6 +42,8 @@ class DefaultView extends Backbone.View
 
 			$('p.extra-span').css('display', 'block')
 
+			$('p#facebook-hell').css('display', 'block')
+
 			$('span.extra-color').css('display', 'inline')
 
 			true 
@@ -50,18 +52,18 @@ class DefaultView extends Backbone.View
 
 			$('div.modal').css('display', 'none')
 
-			$('#default-section button').fadeIn(100)
+			$('#default-section button').fadeIn(500)
 
 			$('#footer-btn').css('transform', 'rotate(360deg) scaleX(-1)')
 
 			$('.log-sign-span').css('display', 'none')
 
 			$('#default-footer')
-				.stop(10)
+				.stop()
 				.animate({
 					height: 120
 				})
-				.end(10)
+				.end()
 
 			$('#footer-btn')
 				.stop(10)
@@ -78,6 +80,8 @@ class DefaultView extends Backbone.View
 
 			$('p.extra-span').css('display', 'none')
 
+			$('p#facebook-hell').css('display', 'none')
+
 			$('span.extra-color').css('display', 'none')
 
 			true
@@ -88,7 +92,7 @@ class DefaultView extends Backbone.View
 		
 		setTimeout ( ->
 			$('div#footer-btn').click()
-		), 10
+		), 100
 
 	render: ->
 
