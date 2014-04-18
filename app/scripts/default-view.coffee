@@ -92,7 +92,7 @@ class DefaultView extends Backbone.View
 		
 		setTimeout ( ->
 			$('div#footer-btn').click()
-		), 100
+		), 300
 
 	render: ->
 
