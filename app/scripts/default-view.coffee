@@ -88,11 +88,13 @@ class DefaultView extends Backbone.View
 
 		false 
 
+	###
 	openDrawer: ->
 		
 		setTimeout ( ->
-			$('div#footer-btn').click()
-		), 300
+			$('div#footer-btn').click(true)
+		), 1000
+	###
 
 	render: ->
 
